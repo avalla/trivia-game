@@ -58,6 +58,12 @@ $ yarn plugin import workspace-tools
 $ yarn install
 ```
 
+Add a `.env` file inside `packages/web-frontend`, for example:
+
+```
+REACT_APP_API_URL=http://localhost:9000
+```
+
 ## Start development environment
 
 Execute from root project:
