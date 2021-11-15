@@ -1,0 +1,33 @@
+{
+  "name": "@trivia-game/web-backend",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@trivia-game/module-logger": "^1.0.0",
+    "@trivia-game/module-models": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-session-sequelize": "^7.1.2",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.2",
+    "node-fetch": "^2.6.6"
+  },
+  "devDependencies": {
+    "jest": "26.6.0",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "nodemon --inspect=127.0.0.1:9229 --watch '../../packages/module-*/*' --watch './src/**/*' --watch './index.js' index.js"
+  },
+  "jest": {
+    "displayName": "web:backend",
+    "testEnvironment": "node",
+    "verbose": true
+  }
+}

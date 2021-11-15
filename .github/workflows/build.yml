@@ -1,0 +1,50 @@
+name: Trivia - Test and build
+
+env:
+  CI: true
+  ISOLATE: true
+  GIT_DEPTH: 0
+  BABEL_DISABLE_CACHE: '1'
+  NODE_ENV: 'test'
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+jobs:
+  build:
+    name: Test & Build
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+#      - name: Get yarn cache directory path
+#        id: yarn-cache-dir-path
+#        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+#      - uses: actions/cache@v2
+#        id: yarn-cache
+#        with:
+#          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+#          key: ${{ runner.os }}-yarn-v2-${{ hashFiles('**/yarn.lock') }}
+#          restore-keys: |
+#            ${{ runner.os }}-yarn-
+      - name: Set Yarn 2
+        run: |
+          yarn set version berry
+          yarn plugin import plugin-interactive-tools
+          yarn plugin import workspace-tools
+      - name: Install dependencies
+        run: yarn install
+      - name: Lint
+        run: yarn lint
+      - name: Building
+        run: yarn frontend build
+      - name: Testing
+        run: yarn test --forceExit
