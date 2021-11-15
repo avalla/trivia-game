@@ -21,7 +21,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - uses: c-hive/gha-yarn-cache@v1
+      - name: Set Yarn 2
+        run: |
+          yarn set version berry
+          yarn plugin import plugin-interactive-tools
+          yarn plugin import workspace-tools
       - name: Install dependencies
         run: yarn install
       - name: Create frontend release
