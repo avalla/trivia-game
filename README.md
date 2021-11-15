@@ -4,6 +4,8 @@
 
 [![Trivia - Test and build](https://github.com/avalla/trivia-game/actions/workflows/build.yml/badge.svg)](https://github.com/avalla/trivia-game/actions/workflows/build.yml)
 
+[![CodeQL](https://github.com/avalla/trivia-game/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/avalla/trivia-game/actions/workflows/codeql-analysis.yml)
+
 Just a coding challenge :)
 
 ## Prerequisites
