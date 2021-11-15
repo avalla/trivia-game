@@ -28,12 +28,33 @@ This project is a monorepo, using yarn workspaces.
     ├── TODO.md                          # This guide
     └── README.md                        # Todo list
 
+
+## Software architecture
+
+See the picture
+
+```
+                         ┌ API ──────────┐          ┌ RDMBS ────┐ 
+                         │               │          │           │     
+ ┌ User ────┐            │               ├──────────┤           │ 
+ │ Laptop   ├────────────┤               │          │           │     
+ │          ├──────┐     └───────────────┘          └───────────┘     
+ └──────────┘      │     ┌ Trivia ───────┐                                               
+                   │     │               │                                               
+                   └─────┤               │                                               
+                         │               │                                               
+                         └───────────────┘                                              
+
+```
+
+
 ## Setting up dev
 
 Execute from root project:
 
 ```shell
 $ yarn set version berry
+$ yarn plugin import interactive-tools
 $ yarn plugin import workspace-tools
 $ yarn install
 ```
