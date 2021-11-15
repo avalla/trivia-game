@@ -1,5 +1,6 @@
+const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:9000';
 async function httpClient({ url, request }) {
-  const response = await fetch(url, request);
+  const response = await fetch(`${BASE_URL}${url}`, request);
   if (!response.ok) {
     console.error('Error from API, response not OK', response.statusText);
     throw new Error(response.statusText);

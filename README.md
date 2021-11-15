@@ -58,10 +58,15 @@ $ yarn plugin import workspace-tools
 $ yarn install
 ```
 
-Add a `.env` file inside `packages/web-frontend`, for example:
+Configuration is customizable via environment variables or .env files
 
 ```
-REACT_APP_API_URL=http://localhost:9000
+API_PORT=
+SESSION_SECRET=
+SQLITE_PATH=
+TRIVIA_API=
+FRONTEND_URL=
+REACT_APP_API_URL=
 ```
 
 ## Start development environment

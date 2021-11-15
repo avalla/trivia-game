@@ -1,7 +1,7 @@
 import httpClient from '../../libs/http-client';
 
 async function postAnswer(body) {
-  const url = `${process.env.REACT_APP_API_URL}/api/v1/trivia/answer`;
+  const url = '/api/v1/trivia/answer';
   const result = await httpClient({
     url,
     request: {
