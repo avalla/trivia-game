@@ -17,7 +17,6 @@ This project is a monorepo, using yarn workspaces.
 
     .
     ├── .github                          # Github Actions
-    ├── docs
     ├── packages                         # Packages (applications, modules, etc)
     │    ├── module-logger               # Logger
     │    ├── module-models               # Models
