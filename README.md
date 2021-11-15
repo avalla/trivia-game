@@ -1,6 +1,6 @@
 # Trivia Game
 
-[![Trivia - Create release](https://github.com/avalla/trivia-game/actions/workflows/release.yml/badge.svg)](https://github.com/avalla/trivia-game/actions/workflows/release.yml)
+[![Trivia - Create release](https://github.com/avalla/trivia-game/actions/workflows/release.yml/badge.svg?branch=v1.0.0)](https://github.com/avalla/trivia-game/actions/workflows/release.yml)
 
 [![Trivia - Test and build](https://github.com/avalla/trivia-game/actions/workflows/build.yml/badge.svg)](https://github.com/avalla/trivia-game/actions/workflows/build.yml)
 
