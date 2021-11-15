@@ -98,3 +98,7 @@ To interact with backend and frontend applications you can also use the shortcut
 ```shell
 $ yarn <backend|frontend> <command>
 ```
+
+## Video
+
+![Video](video.gif)
